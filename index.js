@@ -217,10 +217,10 @@ function logout() {
 }
 // jscs:disable
 /**
-* This function is used to set the base URI for the thr0w service.
+* This function is used to set the hostname for the thr0w service.
 * @method setBase
 * @static
-* @param base {String} The URI.
+* @param name {String} The hostname.
 */
 // jscs:enable
 function setBase(name) {

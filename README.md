@@ -23,7 +23,13 @@ npm install thr0w-api
 
 ## Usage
 
-TODO
+The Thr0w (Node.js) API is closely aligned to the Thr0w (Client) API; so
+much so that one simply needs to understand it to use this API.
+
+https://github.com/larkintuckerllc/thr0w-client
+
+**note**: The one exception is that the client *setBase* method
+uses an URI while the Node.js *setBase* method uses a hostname.
 
 The API reference is available at:
 
