@@ -17,7 +17,9 @@ https://github.com/larkintuckerllc/thr0w-server
 
 ## Installation
 
-TODO
+```
+npm install thr0w-api
+```
 
 ## Usage
 

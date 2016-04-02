@@ -1,7 +1,7 @@
 {
   "name": "thr0w-api",
   "version": "0.0.1",
-  "description": "",
+  "description": "Provides the Thr0w (Node.js) API.",
   "author": "John Tucker <john@larkintuckerllc.com>",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
