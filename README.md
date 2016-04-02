@@ -10,7 +10,10 @@ software. The key to this solution is having one computer behind each screen
 networked to a single computer acting as a server. With this design, the
 splitting and synchronization of content is accomplished through software.
 
-TODO
+This repository provides the project's Thr0w (Node.js) API for the project's
+required Thr0w Server implementation available at:
+
+https://github.com/larkintuckerllc/thr0w-server
 
 ## Installation
 
@@ -19,6 +22,10 @@ TODO
 ## Usage
 
 TODO
+
+The API reference is available at:
+
+http://rawgit.com/larkintuckerllc/thr0w-api/master/doc/index.html
 
 ## Contributing
 
@@ -39,6 +46,10 @@ The JavaScript is to comply with the following style guide.
 * Use named functions instead of passing an anonymous function in as a callback.
 * Define functions in the scope where they are used.
 * Place functions declarations at the end of the scope; rely on hoisting.
+
+The exposed JavaScript classes (or objects) are to be documented using YUIDoc.
+
+http://yui.github.io/yuidoc/
 
 ## Credits
 
