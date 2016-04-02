@@ -1,0 +1,23 @@
+{
+  "name": "thr0w-api",
+  "version": "0.0.1",
+  "description": "",
+  "author": "John Tucker <john@larkintuckerllc.com>",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/larkintuckerllc/thr0w-api"
+  },
+  "keywords": [],
+  "dependencies": {
+    "socket.io-client": "^1.4.5"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-yuidoc": "^0.1.2"
+  },
+  "license": "GPL"
+}
