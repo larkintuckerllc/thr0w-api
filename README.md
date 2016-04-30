@@ -1,4 +1,4 @@
-README v0.0.1 / 01 APRIL 2016
+README v0.0.2 / 29 APRIL 2016
 
 # Thr0w API
 
@@ -30,6 +30,8 @@ https://github.com/larkintuckerllc/thr0w-client
 
 **note**: The one exception is that the client *setBase* method
 uses an URI while the Node.js *setBase* method uses a hostname.
+
+The examples provided in ROOT/examples provide inline documentation on using the API.
 
 The API reference is available at:
 
