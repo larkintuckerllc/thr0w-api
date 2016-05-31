@@ -167,7 +167,7 @@ function login(username, password, callback) {
     method: 'POST',
     headers: {
       'Content-Type': 'application/x-www-form-urlencoded',
-      'Content-Length': postData.length
+      'Content-Length': Buffer.byteLength(postData)
     }
   };
   var req = http.request(options, handleRequest);
@@ -245,7 +245,7 @@ function thr0w(channels, data) {
     headers: {
       'Authorization': 'bearer ' + token,
       'Content-Type': 'application/json',
-      'Content-Length': postData.length
+      'Content-Length': Buffer.byteLength(postData)
     }
   };
   var req = http.request(options, handleRequest);

@@ -257,7 +257,7 @@ function login(username, password, callback) {
     method: &#x27;POST&#x27;,
     headers: {
       &#x27;Content-Type&#x27;: &#x27;application/x-www-form-urlencoded&#x27;,
-      &#x27;Content-Length&#x27;: postData.length
+      &#x27;Content-Length&#x27;: Buffer.byteLength(postData)
     }
   };
   var req = http.request(options, handleRequest);
@@ -335,7 +335,7 @@ function thr0w(channels, data) {
     headers: {
       &#x27;Authorization&#x27;: &#x27;bearer &#x27; + token,
       &#x27;Content-Type&#x27;: &#x27;application/json&#x27;,
-      &#x27;Content-Length&#x27;: postData.length
+      &#x27;Content-Length&#x27;: Buffer.byteLength(postData)
     }
   };
   var req = http.request(options, handleRequest);
