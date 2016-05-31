@@ -1,5 +1,5 @@
 'use strict';
-var SERVER = '52.87.61.17';
+var SERVER = 'localhost';
 var INTERVAL = 300;
 var CHANNELS = [0];
 var LEFT = 12;
@@ -18,7 +18,7 @@ SETS THE THR0W SERVER HOSTNAME (AS OPPOSED TO URL);
 CHANGE AS REQUIRED
 */
 thr0w.setBase(SERVER);
-thr0w.login('admin', 'demo', handleLogin);
+thr0w.login('admin', 'changeme', handleLogin); // REPLACE WITH USERNAME PASSWORD
 function handleLogin(error) {
   if (error) {
     process.exit(1);
