@@ -63,6 +63,7 @@ function authenticated() {
 */
 // jscs:enable
 function connect(chn, connectCallback, messageCallback) {
+  var connected = false;
   var authTimeout;
   if (socket) {
     throw 400;
@@ -85,6 +86,7 @@ function connect(chn, connectCallback, messageCallback) {
   authTimeout = setTimeout(fail, 5000);
   socket = io('http://' + hostname + ':3001');
   socket.on('authenticated', success);
+  socket.on('reconnect', reconnect);
   socket.emit('authenticate',
     JSON.stringify({token: token, channel: channel})
   );
@@ -93,14 +95,19 @@ function connect(chn, connectCallback, messageCallback) {
     connectCallback(500);
   }
   function success() {
-    clearTimeout(authTimeout);
-    socket.on('message', messageCallback);
-    socket.on('duplicate', duplicateCallback);
-    connectCallback(null);
-    function duplicateCallback() {
-      disconnect();
+    if (!connected) {
+      connected = true;
+      clearTimeout(authTimeout);
+      socket.on('message', messageCallback);
+      socket.on('duplicate', disconnect);
+      connectCallback(null);
     }
   }
+  function reconnect() {
+     socket.emit('authenticate',
+       JSON.stringify({token: token, channel: channel})
+     );
+   }
 }
 // jscs:disable
 /**
